@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kerolos Magdy | Portfolio</title>
-  <!-- Google Fonts -->
+  <link rel="icon" type="image/png" href="My LOGO.png">
+  <link rel="shortcut icon" type="image/png" href="My LOGO.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -60,6 +61,21 @@
       box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
     }
     
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .header-brand .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+      box-shadow: 0 0 12px rgba(0, 212, 255, 0.28);
+    }
+
     .logo {
       font-size: 1.5rem;
       font-weight: 700;
@@ -67,6 +83,24 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .hero-title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title-wrap .hero-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
     }
     
     header nav {
@@ -102,7 +136,64 @@
       width: 100%;
       max-width: none;
     }
-    
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-image-wrap {
+      flex: 0 0 320px;
+      max-width: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+
+    .hero-title-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      flex-wrap: nowrap;
+      margin-bottom: 1rem;
+      justify-content: flex-start;
+    }
+
+    .hero-title-wrap .hero-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+      box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
+    }
+
+    @media (max-width: 720px) {
+      .hero-image-wrap {
+        flex: 1 1 100%;
+      }
+      .hero-text {
+        flex: 1 1 100%;
+      }
+      .hero-title-wrap {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 880px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .hero::before {
       content: '';
       position: absolute;
@@ -685,7 +776,10 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">Kerolos Magdy</div>
+    <div class="header-brand">
+      <img src="My LOGO.png" alt="Kerolos Logo" class="brand-logo">
+      <div class="logo">Kerolos Magdy</div>
+    </div>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -699,9 +793,14 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <img src="صورتي الشخصية خلفيات 1.jpeg" alt="Kerolos Magdy Profile" loading="eager">
-      <h1>Hi, I'm Kerolos Magdy</h1>
-      <p>A Frontend Developer passionate about building modern web experiences</p>
+      <div class="hero-image-wrap">
+        <img src="صورتي الشخصية خلفيات 1.jpeg" alt="Kerolos Magdy Profile" loading="eager">
+      </div>
+      <div>
+        <div class="hero-title-wrap">
+          <h1>Hi, I'm Kerolos Magdy</h1>
+        </div>
+        <p>A Frontend Developer passionate about building modern web experiences</p>
       <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
       <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(255, 183, 3, 0.8)); border: 2px solid var(--primary-color);">Get in Touch</button>
     </div>
