@@ -420,16 +420,11 @@
       margin-top: 2rem;
     }
     
-    .skills-grid .card img {
-      max-height: 160px;
-      object-fit: contain;
-    }
-
-      
-    .projects-grid .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
     
     .card {
@@ -467,14 +462,24 @@
     .card img {
       width: 100%;
       height: auto;
-      max-height: 300px;
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 1rem;
       display: block;
       transition: transform 0.3s;
     }
-    
+
+    .skills-grid .card img {
+      max-height: 160px;
+      object-fit: contain;
+    }
+
+    .projects-grid .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+    }
+
     .card:hover img {
       transform: scale(1.05);
     }
@@ -782,7 +787,7 @@
   <!-- Header -->
   <header>
     <div class="header-brand">
-      <img src="/PORTIFOLIO/My LOGO.png" alt="Kerolos Logo" class="brand-logo">
+      <img src="My LOGO.png" alt="Kerolos Logo" class="brand-logo">
       <div class="logo">Kerolos Magdy</div>
     </div>
     <nav>
@@ -799,7 +804,7 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-image-wrap">
-        <img src="/PORTIFOLIO/صورتي الشخصية خلفيات 1.jpeg" alt="Kerolos Magdy Profile" loading="eager">
+        <img src="صورتي الشخصية خلفيات 1.jpeg" alt="Kerolos Magdy Profile" loading="eager">
       </div>
       <div>
         <div class="hero-title-wrap">
@@ -823,19 +828,19 @@
     <h2>My Skills</h2>
     <div class="skills-grid">
       <div class="card">
-        <img src="/PORTIFOLIO/Frontend_Development_skills.jpeg" alt="Frontend development skills roadmap" loading="lazy">
+        <img src="Frontend_Development_skills.jpeg" alt="Frontend development skills roadmap" loading="lazy">
         <h3>Frontend Development</h3>
         <p>HTML, CSS, JavaScript, React</p>
         <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
       </div>
       <div class="card">
-        <img src="/PORTIFOLIO/Backend_Development_skills.jpeg" alt="Backend development skills roadmap" loading="lazy">
+        <img src="Backend_Development_skills.jpeg" alt="Backend development skills roadmap" loading="lazy">
         <h3>Backend Basics</h3>
         <p>Node.js, Express, Databases</p>
         <div class="progress-bar"><div class="progress" style="width:60%"></div></div>
       </div>
       <div class="card">
-        <img src="/PORTIFOLIO/UI_UX_Design_skills.jpeg" alt="UI/UX design skills roadmap" loading="lazy">
+        <img src="UI_UX_Design_skills.jpeg" alt="UI/UX design skills roadmap" loading="lazy">
         <h3>UI/UX Design</h3>
         <p>Responsive Design, Figma, Creative Thinking</p>
         <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
@@ -847,9 +852,9 @@
   <section id="hobbies">
     <h2>Beyond Work: My Hobbies</h2>
     <div class="hobbies-grid">
-      <div class="card"><div class="hobby-image"><img src="/PORTIFOLIO/صورتي الشخصية في ملعب كورة.jpeg" alt="Football Hobby" loading="lazy"></div><h3>⚽ Football</h3><p>I enjoy playing football whenever I get the chance. It keeps me active and helps me relax after intense coding sessions.</p></div>
-      <div class="card"><div class="hobby-image"><img src="/PORTIFOLIO/صورتي الشخصية شطرنج.jpeg" alt="Chess Hobby" loading="lazy"></div><h3>♟️ Chess</h3><p>Chess sharpens my mind and strengthens my strategic thinking skills, which directly benefit my programming approach.</p></div>
-      <div class="card"><div class="hobby-image"><img src="/PORTIFOLIO/Copilot_20260623_140355.png" alt="Coding Hobby" loading="lazy"></div><h3>💻 Frontend Coding</h3><p>Building interactive websites excites me! I love bringing designs to life and creating smooth user experiences.</p></div>
+      <div class="card"><div class="hobby-image"><img src="صورتي الشخصية في ملعب كورة.jpeg" alt="Football Hobby" loading="lazy"></div><h3>⚽ Football</h3><p>I enjoy playing football whenever I get the chance. It keeps me active and helps me relax after intense coding sessions.</p></div>
+      <div class="card"><div class="hobby-image"><img src="صورتي الشخصية شطرنج.jpeg" alt="Chess Hobby" loading="lazy"></div><h3>♟️ Chess</h3><p>Chess sharpens my mind and strengthens my strategic thinking skills, which directly benefit my programming approach.</p></div>
+      <div class="card"><div class="hobby-image"><img src="Copilot_20260623_140355.png" alt="Coding Hobby" loading="lazy"></div><h3>💻 Frontend Coding</h3><p>Building interactive websites excites me! I love bringing designs to life and creating smooth user experiences.</p></div>
     </div>
   </section>
 
@@ -858,19 +863,19 @@
     <h2>My Projects</h2>
     <div class="projects-grid">
       <div class="card">
-        <img src="/PORTIFOLIO/Logo LifeFit Galaxy.png" alt="FitLife Project" loading="lazy">
+        <img src="Logo LifeFit Galaxy.png" alt="FitLife Project" loading="lazy">
         <h3>💪 FitLife Galaxy </h3>
         <p>A comprehensive health and fitness tracking platform designed to help users achieve their wellness goals.</p>
         <a href="https://fitlife-galaxy.lovable.app/" target="_blank" rel="noopener"><button>View Project</button></a>
-      </div>
+      </div>  
       <div class="card">
-        <img src="/PORTIFOLIO/Logo AI Orthodoxa.png" alt="Orthodoxa AI Project" loading="lazy">
+        <img src="Logo AI Orthodoxa.png" alt="Orthodoxa AI Project" loading="lazy">
         <h3>🙏 Orthodoxa AI</h3>
         <p>An intelligent platform exploring Christian faith, theology, and learning through modern AI technology.</p>
         <a href="https://orthodoxa-ai.lovable.app/" target="_blank" rel="noopener"><button>View Project</button></a>
       </div>
       <div class="card">
-        <img src="/PORTIFOLIO/Logo مترجم قبطي.png" alt="Coptic Translator Project" loading="lazy">
+        <img src="Logo مترجم قبطي.png" alt="Coptic Translator Project" loading="lazy">
         <h3>📖 Coptic Translator</h3>
         <p>A tool for translating Coptic texts into modern languages, preserving the rich heritage of early Christian literature.</p>
         <a href="https://greek-coptic-translation.lovable.app/" target="_blank" rel="noopener"><button>View Project</button></a>
